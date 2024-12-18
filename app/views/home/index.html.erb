@@ -1,0 +1,12 @@
+<h1>HELLO</h1>
+
+<ul>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td><%= user.id %></td>
+    </tr>
+  <% end %>
+</ul>
+
+<%= link_to "Регистрация", users_index_path %>

@@ -1,0 +1,2386 @@
+Started GET "/" for 127.0.0.1 at 2024-12-18 01:00:02 +0300
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='Projectweb'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.2.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.2.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 959ms (Views: 54.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-18 01:07:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  
+ActionController::RoutingError (uninitialized constant HomeController)
+Caused by: ActionDispatch::MissingController (uninitialized constant HomeController)
+Caused by: NameError (uninitialized constant HomeController)
+
+Information for: ActionController::RoutingError (uninitialized constant HomeController):
+  
+
+Information for cause: ActionDispatch::MissingController (uninitialized constant HomeController):
+  
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:102:in `rescue in controller_class_for'
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:98:in `controller_class_for'
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+
+Information for cause: NameError (uninitialized constant HomeController):
+  
+activesupport (8.0.1) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (8.0.1) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:99:in `controller_class_for'
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-12-18 01:08:20 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+Completed 406 Not Acceptable in 905ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 32.5ms)
+
+
+  
+ActionController::MissingExactTemplate (HomeController#index is missing a template for request formats: text/html):
+  
+actionpack (8.0.1) lib/action_controller/metal/implicit_render.rb:49:in `default_render'
+actionpack (8.0.1) lib/action_controller/metal/basic_implicit_render.rb:9:in `send_action'
+actionpack (8.0.1) lib/abstract_controller/base.rb:226:in `process_action'
+actionpack (8.0.1) lib/action_controller/metal/rendering.rb:193:in `process_action'
+actionpack (8.0.1) lib/abstract_controller/callbacks.rb:261:in `block in process_action'
+activesupport (8.0.1) lib/active_support/callbacks.rb:120:in `block in run_callbacks'
+turbo-rails (2.0.11) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.11) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (8.0.1) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+actiontext (8.0.1) lib/action_text/rendering.rb:25:in `with_renderer'
+actiontext (8.0.1) lib/action_text/engine.rb:71:in `block (4 levels) in <class:Engine>'
+activesupport (8.0.1) lib/active_support/callbacks.rb:129:in `instance_exec'
+activesupport (8.0.1) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+activesupport (8.0.1) lib/active_support/callbacks.rb:140:in `run_callbacks'
+actionpack (8.0.1) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (8.0.1) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (8.0.1) lib/action_controller/metal/instrumentation.rb:76:in `block in process_action'
+activesupport (8.0.1) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (8.0.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (8.0.1) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (8.0.1) lib/action_controller/metal/instrumentation.rb:75:in `process_action'
+actionpack (8.0.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (8.0.1) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (8.0.1) lib/abstract_controller/base.rb:163:in `process'
+actionview (8.0.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-12-18 01:10:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+Completed 406 Not Acceptable in 808ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 14.2ms)
+
+
+  
+ActionController::MissingExactTemplate (HomeController#index is missing a template for request formats: text/html):
+  
+actionpack (8.0.1) lib/action_controller/metal/implicit_render.rb:49:in `default_render'
+actionpack (8.0.1) lib/action_controller/metal/basic_implicit_render.rb:9:in `send_action'
+actionpack (8.0.1) lib/abstract_controller/base.rb:226:in `process_action'
+actionpack (8.0.1) lib/action_controller/metal/rendering.rb:193:in `process_action'
+actionpack (8.0.1) lib/abstract_controller/callbacks.rb:261:in `block in process_action'
+activesupport (8.0.1) lib/active_support/callbacks.rb:120:in `block in run_callbacks'
+turbo-rails (2.0.11) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.11) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (8.0.1) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+actiontext (8.0.1) lib/action_text/rendering.rb:25:in `with_renderer'
+actiontext (8.0.1) lib/action_text/engine.rb:71:in `block (4 levels) in <class:Engine>'
+activesupport (8.0.1) lib/active_support/callbacks.rb:129:in `instance_exec'
+activesupport (8.0.1) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+activesupport (8.0.1) lib/active_support/callbacks.rb:140:in `run_callbacks'
+actionpack (8.0.1) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (8.0.1) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (8.0.1) lib/action_controller/metal/instrumentation.rb:76:in `block in process_action'
+activesupport (8.0.1) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (8.0.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (8.0.1) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (8.0.1) lib/action_controller/metal/instrumentation.rb:75:in `process_action'
+actionpack (8.0.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (8.0.1) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (8.0.1) lib/abstract_controller/base.rb:163:in `process'
+actionview (8.0.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-12-18 01:10:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.6ms | GC: 1.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | GC: 1.3ms)
+Completed 200 OK in 824ms (Views: 55.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 30.3ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2024-12-18 01:10:40 +0300
+Started GET "/" for 127.0.0.1 at 2024-12-18 01:16:32 +0300
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: postgres.
+
+Please check your database configuration to ensure the username/password are valid.
+)
+Caused by: PG::ConnectionBad (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+)
+
+Information for: ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: postgres.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:65:in `rescue in new_client'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:57:in `new_client'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:934:in `connect'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:946:in `reconnect'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:770:in `block in verify!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:761:in `verify!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:778:in `connect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:984:in `block in with_raw_connection'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:983:in `with_raw_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in `with_connection'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.1) lib/active_record/migration.rb:1431:in `initialize'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `new'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `open'
+activerecord (8.0.1) lib/active_record/migration.rb:763:in `block (2 levels) in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.1) lib/active_record/migration.rb:762:in `block in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `each'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:740:in `check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+
+Information for cause: PG::ConnectionBad (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+pg (1.5.9) lib/pg/connection.rb:837:in `connect_start'
+pg (1.5.9) lib/pg/connection.rb:837:in `connect_to_hosts'
+pg (1.5.9) lib/pg/connection.rb:772:in `new'
+pg (1.5.9) lib/pg.rb:63:in `connect'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:58:in `new_client'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:934:in `connect'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:946:in `reconnect'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:770:in `block in verify!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:761:in `verify!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:778:in `connect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:984:in `block in with_raw_connection'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:983:in `with_raw_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in `with_connection'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.1) lib/active_record/migration.rb:1431:in `initialize'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `new'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `open'
+activerecord (8.0.1) lib/active_record/migration.rb:763:in `block (2 levels) in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.1) lib/active_record/migration.rb:762:in `block in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `each'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:740:in `check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-12-18 01:19:05 +0300
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: postgres.
+
+Please check your database configuration to ensure the username/password are valid.
+)
+Caused by: PG::ConnectionBad (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  Peer authentication failed for user "postgres"
+)
+
+Information for: ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: postgres.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:65:in `rescue in new_client'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:57:in `new_client'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:934:in `connect'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:946:in `reconnect'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:770:in `block in verify!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:761:in `verify!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:778:in `connect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:984:in `block in with_raw_connection'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:983:in `with_raw_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in `with_connection'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.1) lib/active_record/migration.rb:1431:in `initialize'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `new'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `open'
+activerecord (8.0.1) lib/active_record/migration.rb:763:in `block (2 levels) in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.1) lib/active_record/migration.rb:762:in `block in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `each'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:740:in `check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+
+Information for cause: PG::ConnectionBad (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  Peer authentication failed for user "postgres"
+):
+  
+pg (1.5.9) lib/pg/connection.rb:709:in `async_connect_or_reset'
+pg (1.5.9) lib/pg/connection.rb:844:in `connect_to_hosts'
+pg (1.5.9) lib/pg/connection.rb:772:in `new'
+pg (1.5.9) lib/pg.rb:63:in `connect'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:58:in `new_client'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:934:in `connect'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:946:in `reconnect'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:669:in `block in reconnect!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:770:in `block in verify!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:761:in `verify!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:778:in `connect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:984:in `block in with_raw_connection'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:983:in `with_raw_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in `quoted_scope'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in `data_source_sql'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in `with_connection'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.1) lib/active_record/migration.rb:1431:in `initialize'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `new'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `open'
+activerecord (8.0.1) lib/active_record/migration.rb:763:in `block (2 levels) in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.1) lib/active_record/migration.rb:762:in `block in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `each'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:740:in `check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+  [1m[35m (111.0ms)[0m  [1m[35mCREATE DATABASE "projweb_dev" ENCODING = 'utf8' /*application='Projectweb'*/[0m
+  [1m[35m (148.4ms)[0m  [1m[35mCREATE DATABASE "projweb_dev" ENCODING = 'unicode' /*application='Projectweb'*/[0m
+  [1m[35m (135.2ms)[0m  [1m[35mCREATE DATABASE "projweb_dev" ENCODING = 'unicode' /*application='Projectweb'*/[0m
+Started GET "/" for 127.0.0.1 at 2024-12-18 01:34:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 127.3ms | GC: 0.5ms)
+Completed 200 OK in 884ms (Views: 155.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 13.3ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" /*application='Projectweb'*/[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20231010100000) /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-17 22:34:32.174467', '2024-12-17 22:34:32.174470') RETURNING "key" /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'c0751b1811f9b5ced6dd714f346983a027a7563c', '2024-12-17 22:34:32.182067', '2024-12-17 22:34:32.182070') RETURNING "key" /*application='Projectweb'*/[0m
+  [1m[35m (30.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" /*application='Projectweb'*/[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Projectweb'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20231010100000) /*application='Projectweb'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-17 22:34:32.255282', '2024-12-17 22:34:32.255285') RETURNING "key" /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2024-12-17 22:34:32.261321' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'c0751b1811f9b5ced6dd714f346983a027a7563c', '2024-12-17 22:34:32.264855', '2024-12-17 22:34:32.264857') RETURNING "key" /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Migrating to CreateUsers (20241217223935)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Projectweb'*/[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Projectweb'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK TRANSACTION /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Projectweb'*/[0m
+  [1m[36mUser Create (5.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at") VALUES ('Petya', 'Petrov', '2024-12-17 22:45:47.658647', '2024-12-17 22:45:47.658647') RETURNING "id" /*application='Projectweb'*/[0m
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Projectweb'*/[0m
+Started GET "/" for 127.0.0.1 at 2024-12-18 01:54:21 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 998ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 11.0ms)
+
+
+  
+NoMethodError (undefined method `All' for User:Class):
+  
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/" for 127.0.0.1 at 2024-12-18 01:55:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (25.9ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 47.1ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 48.4ms | GC: 0.5ms)
+Completed 500 Internal Server Error in 1159ms (ActiveRecord: 28.4ms (1 query, 0 cached) | GC: 11.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000bef0>)
+Caused by: NoMethodError (undefined method `user_path' for #<ActionView::Base:0x0000000000bef0>)
+
+Information for: ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000bef0>):
+    4:   <% @users.each do |user| %>
+    5:     <tr>
+    6:       <td><%= user.first_name %></td>
+    7:       <td><%= link_to 'Show', user %></td>
+    8:     </tr>
+    9:   <% end %>
+   10: </ul>
+  
+app/views/home/index.html.erb:7
+app/views/home/index.html.erb:4
+
+Information for cause: NoMethodError (undefined method `user_path' for #<ActionView::Base:0x0000000000bef0>):
+  
+app/views/home/index.html.erb:7
+app/views/home/index.html.erb:4
+Started GET "/" for 127.0.0.1 at 2024-12-18 01:55:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (23.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 37.2ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 91.5ms | GC: 0.9ms)
+Completed 200 OK in 891ms (Views: 87.8ms | ActiveRecord: 25.7ms (1 query, 0 cached) | GC: 19.2ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[35m (5.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" /*application='Projectweb'*/[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = '261a0bda710d0c90054d388aa4bc8566ebfd06df', "updated_at" = '2024-12-17 23:01:37.280819' WHERE "ar_internal_metadata"."key" = 'schema_sha1' /*application='Projectweb'*/[0m
+  [1m[35m (26.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" /*application='Projectweb'*/[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'development', "updated_at" = '2024-12-17 23:01:37.337963' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2024-12-17 23:01:37.344528' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = '261a0bda710d0c90054d388aa4bc8566ebfd06df', "updated_at" = '2024-12-17 23:01:37.349214' WHERE "ar_internal_metadata"."key" = 'schema_sha1' /*application='Projectweb'*/[0m
+Started GET "/" for 127.0.0.1 at 2024-12-18 02:06:01 +0300
+  
+ActiveRecord::StatementInvalid (SQLite3::IOException: disk I/O error:
+PRAGMA journal_mode='WAL')
+Caused by: SQLite3::IOException (disk I/O error:
+PRAGMA journal_mode='WAL')
+
+Information for: ActiveRecord::StatementInvalid (SQLite3::IOException: disk I/O error:
+PRAGMA journal_mode='WAL'):
+  
+
+Information for cause: SQLite3::IOException (disk I/O error:
+PRAGMA journal_mode='WAL'):
+  
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/statement.rb:36:in `prepare'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/statement.rb:36:in `initialize'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/database.rb:216:in `new'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/database.rb:216:in `prepare'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/database.rb:248:in `execute'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/pragmas.rb:65:in `set_enum_pragma'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/pragmas.rb:298:in `journal_mode='
+activerecord (8.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:835:in `public_send'
+activerecord (8.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:835:in `block in configure_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:833:in `each'
+activerecord (8.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:833:in `configure_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:677:in `block (2 levels) in reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:391:in `reset_transaction'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:675:in `block in reconnect!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:770:in `block in verify!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:761:in `verify!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:778:in `connect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:984:in `block in with_raw_connection'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:983:in `with_raw_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:555:in `block in raw_execute'
+activesupport (8.0.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:1129:in `log'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:554:in `raw_execute'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:591:in `internal_execute'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:547:in `internal_exec_query'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:114:in `query'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:110:in `query_values'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in `with_connection'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.1) lib/active_record/migration.rb:1431:in `initialize'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `new'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `open'
+activerecord (8.0.1) lib/active_record/migration.rb:763:in `block (2 levels) in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.1) lib/active_record/migration.rb:762:in `block in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `each'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:740:in `check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-12-18 02:07:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (25.8ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 39.8ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 87.7ms | GC: 1.2ms)
+Completed 200 OK in 917ms (Views: 83.5ms | ActiveRecord: 28.0ms (1 query, 0 cached) | GC: 15.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-18 02:07:21 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 304ms (Views: 4.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-18 02:08:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (25.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 41.1ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 94.8ms | GC: 0.9ms)
+Completed 200 OK in 944ms (Views: 91.0ms | ActiveRecord: 28.2ms (1 query, 0 cached) | GC: 19.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-18 02:11:31 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (24.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 39.7ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 85.8ms | GC: 1.2ms)
+Completed 200 OK in 867ms (Views: 83.4ms | ActiveRecord: 26.7ms (1 query, 0 cached) | GC: 12.4ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:11:33 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 298ms (Views: 7.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:14:34 +0300
+  
+ActiveRecord::StatementInvalid (SQLite3::IOException: disk I/O error:
+PRAGMA journal_mode='WAL')
+Caused by: SQLite3::IOException (disk I/O error:
+PRAGMA journal_mode='WAL')
+
+Information for: ActiveRecord::StatementInvalid (SQLite3::IOException: disk I/O error:
+PRAGMA journal_mode='WAL'):
+  
+
+Information for cause: SQLite3::IOException (disk I/O error:
+PRAGMA journal_mode='WAL'):
+  
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/statement.rb:36:in `prepare'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/statement.rb:36:in `initialize'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/database.rb:216:in `new'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/database.rb:216:in `prepare'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/database.rb:248:in `execute'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/pragmas.rb:65:in `set_enum_pragma'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/pragmas.rb:298:in `journal_mode='
+activerecord (8.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:835:in `public_send'
+activerecord (8.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:835:in `block in configure_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:833:in `each'
+activerecord (8.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:833:in `configure_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:677:in `block (2 levels) in reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:391:in `reset_transaction'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:675:in `block in reconnect!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:770:in `block in verify!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:761:in `verify!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:778:in `connect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:984:in `block in with_raw_connection'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:983:in `with_raw_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:555:in `block in raw_execute'
+activesupport (8.0.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:1129:in `log'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:554:in `raw_execute'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:591:in `internal_execute'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:547:in `internal_exec_query'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:114:in `query'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:110:in `query_values'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in `with_connection'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.1) lib/active_record/migration.rb:1431:in `initialize'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `new'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `open'
+activerecord (8.0.1) lib/active_record/migration.rb:763:in `block (2 levels) in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.1) lib/active_record/migration.rb:762:in `block in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `each'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:740:in `check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-12-18 02:14:40 +0300
+  
+ActiveRecord::StatementInvalid (SQLite3::IOException: disk I/O error:
+PRAGMA journal_mode='WAL')
+Caused by: SQLite3::IOException (disk I/O error:
+PRAGMA journal_mode='WAL')
+
+Information for: ActiveRecord::StatementInvalid (SQLite3::IOException: disk I/O error:
+PRAGMA journal_mode='WAL'):
+  
+
+Information for cause: SQLite3::IOException (disk I/O error:
+PRAGMA journal_mode='WAL'):
+  
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/statement.rb:36:in `prepare'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/statement.rb:36:in `initialize'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/database.rb:216:in `new'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/database.rb:216:in `prepare'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/database.rb:248:in `execute'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/pragmas.rb:65:in `set_enum_pragma'
+sqlite3-2.4.1-x86_64-linux (gnu) lib/sqlite3/pragmas.rb:298:in `journal_mode='
+activerecord (8.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:835:in `public_send'
+activerecord (8.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:835:in `block in configure_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:833:in `each'
+activerecord (8.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:833:in `configure_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:677:in `block (2 levels) in reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:391:in `reset_transaction'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:675:in `block in reconnect!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:668:in `reconnect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:770:in `block in verify!'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:761:in `verify!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:778:in `connect!'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:984:in `block in with_raw_connection'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:983:in `with_raw_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:555:in `block in raw_execute'
+activesupport (8.0.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:1129:in `log'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:554:in `raw_execute'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:591:in `internal_execute'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:547:in `internal_exec_query'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:114:in `query'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:110:in `query_values'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in `with_connection'
+activerecord (8.0.1) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.0.1) lib/active_record/migration.rb:1431:in `initialize'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `new'
+activerecord (8.0.1) lib/active_record/migration.rb:1279:in `open'
+activerecord (8.0.1) lib/active_record/migration.rb:763:in `block (2 levels) in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.0.1) lib/active_record/migration.rb:762:in `block in pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `each'
+activerecord (8.0.1) lib/active_record/migration.rb:761:in `pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:740:in `check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-12-18 02:15:07 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 686ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 9.5ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/" for 127.0.0.1 at 2024-12-18 02:16:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (25.8ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 45.4ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.4ms | GC: 0.9ms)
+Completed 500 Internal Server Error in 821ms (ActiveRecord: 28.2ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for #<User id: 1, first_name: "Petya", last_name: "Petrov", created_at: "2024-12-17 23:05:31.000000000 +0000", updated_at: "2024-12-17 23:05:31.000000000 +0000">)
+Caused by: NoMethodError (undefined method `email' for #<User id: 1, first_name: "Petya", last_name: "Petrov", created_at: "2024-12-17 23:05:31.000000000 +0000", updated_at: "2024-12-17 23:05:31.000000000 +0000">)
+
+Information for: ActionView::Template::Error (undefined method `email' for #<User id: 1, first_name: "Petya", last_name: "Petrov", created_at: "2024-12-17 23:05:31.000000000 +0000", updated_at: "2024-12-17 23:05:31.000000000 +0000">):
+    3: <ul>
+    4:   <% @users.each do |user| %>
+    5:     <tr>
+    6:       <td><%= user.email %></td>
+    7:       <td><%= user.id %></td>
+    8:     </tr>
+    9:   <% end %>
+  
+app/views/home/index.html.erb:6
+app/views/home/index.html.erb:4
+
+Information for cause: NoMethodError (undefined method `email' for #<User id: 1, first_name: "Petya", last_name: "Petrov", created_at: "2024-12-17 23:05:31.000000000 +0000", updated_at: "2024-12-17 23:05:31.000000000 +0000">):
+  
+app/views/home/index.html.erb:6
+app/views/home/index.html.erb:4
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[35m (4.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" /*application='Projectweb'*/[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar NOT NULL, "password_digest" varchar NOT NULL, "email" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'f3531e7e68ace77b4f90dcedf4b14391e27bcdcf', "updated_at" = '2024-12-17 23:19:40.460042' WHERE "ar_internal_metadata"."key" = 'schema_sha1' /*application='Projectweb'*/[0m
+  [1m[35m (26.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" /*application='Projectweb'*/[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar NOT NULL, "password_digest" varchar NOT NULL, "email" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'development', "updated_at" = '2024-12-17 23:19:40.517157' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2024-12-17 23:19:40.524415' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'f3531e7e68ace77b4f90dcedf4b14391e27bcdcf', "updated_at" = '2024-12-17 23:19:40.528523' WHERE "ar_internal_metadata"."key" = 'schema_sha1' /*application='Projectweb'*/[0m
+Started GET "/" for 127.0.0.1 at 2024-12-18 02:19:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (24.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 30.7ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 80.8ms | GC: 0.9ms)
+Completed 200 OK in 872ms (Views: 81.7ms | ActiveRecord: 24.5ms (1 query, 0 cached) | GC: 2.9ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:19:56 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 3.5ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 0.2ms)
+Completed 200 OK in 313ms (Views: 8.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:24:28 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 7.5ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | GC: 0.2ms)
+Completed 500 Internal Server Error in 696ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.1ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty)
+Caused by: ArgumentError (First argument in form cannot contain nil or be empty)
+
+Information for: ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>
+    2:   Sign up
+    3: </h1>
+    4: <%= form_for @user do |u| %>
+    5: 
+    6:   <div class="field">
+    7:     <%= u.label 'E-mail' %>
+  
+app/views/users/index.html.erb:4
+
+Information for cause: ArgumentError (First argument in form cannot contain nil or be empty):
+  
+app/views/users/index.html.erb:4
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:29:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 8.6ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | GC: 0.3ms)
+Completed 500 Internal Server Error in 693ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty)
+Caused by: ArgumentError (First argument in form cannot contain nil or be empty)
+
+Information for: ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>
+    2:   Sign up
+    3: </h1>
+    4: <%= form_for @user do |u| %>
+    5: 
+    6:   <div class="field">
+    7:     <%= u.label 'E-mail' %>
+  
+app/views/users/index.html.erb:4
+
+Information for cause: ArgumentError (First argument in form cannot contain nil or be empty):
+  
+app/views/users/index.html.erb:4
+Started GET "/" for 127.0.0.1 at 2024-12-18 02:34:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (24.5ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 30.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 77.2ms | GC: 0.7ms)
+Completed 200 OK in 860ms (Views: 75.2ms | ActiveRecord: 24.6ms (1 query, 0 cached) | GC: 2.9ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:34:22 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 7.9ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.3ms)
+Completed 500 Internal Server Error in 312ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty)
+Caused by: ArgumentError (First argument in form cannot contain nil or be empty)
+
+Information for: ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>
+    2:   Sign up
+    3: </h1>
+    4: <%= form_for @user do |u| %>
+    5: 
+    6:   <div class="field">
+    7:     <%= u.label 'E-mail' %>
+  
+app/views/users/index.html.erb:4
+
+Information for cause: ArgumentError (First argument in form cannot contain nil or be empty):
+  
+app/views/users/index.html.erb:4
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:34:58 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 7.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | GC: 0.3ms)
+Completed 500 Internal Server Error in 666ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty)
+Caused by: ArgumentError (First argument in form cannot contain nil or be empty)
+
+Information for: ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>
+    2:   Sign up
+    3: </h1>
+    4: <%= form_for @user do |u| %>
+    5: 
+    6:   <div class="field">
+    7:     <%= u.label 'E-mail' %>
+  
+app/views/users/index.html.erb:4
+
+Information for cause: ArgumentError (First argument in form cannot contain nil or be empty):
+  
+app/views/users/index.html.erb:4
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:36:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 73.7ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 74.9ms | GC: 0.9ms)
+Completed 500 Internal Server Error in 720ms (ActiveRecord: 24.4ms (0 queries, 0 cached) | GC: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `registration_path' for #<ActionView::Base:0x0000000000c058>)
+Caused by: NameError (undefined local variable or method `registration_path' for #<ActionView::Base:0x0000000000c058>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `registration_path' for #<ActionView::Base:0x0000000000c058>):
+    16:       <p>Заполните все поля, чтобы создать новый аккаунт.</p>
+    17: 
+    18:       <!-- форма регистрации с использованием form_for -->
+    19:       <%= form_for(User.new, url: registration_path) do |f| %>
+    20: 
+    21:         <!-- поле ввода имени -->
+    22:         <div class="form-group">
+  
+app/views/users/index.html.erb:19
+
+Information for cause: NameError (undefined local variable or method `registration_path' for #<ActionView::Base:0x0000000000c058>):
+  
+app/views/users/index.html.erb:19
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:41:33 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 78.2ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 79.6ms | GC: 1.3ms)
+Completed 500 Internal Server Error in 781ms (ActiveRecord: 25.8ms (0 queries, 0 cached) | GC: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `create_path' for #<ActionView::Base:0x0000000000bfe0>)
+Caused by: NameError (undefined local variable or method `create_path' for #<ActionView::Base:0x0000000000bfe0>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `create_path' for #<ActionView::Base:0x0000000000bfe0>):
+    16:       <p>Заполните все поля, чтобы создать новый аккаунт.</p>
+    17: 
+    18:       <!-- форма регистрации с использованием form_for -->
+    19:       <%= form_for(User.new, url: create_path) do |f| %>
+    20: 
+    21:         <!-- поле ввода имени -->
+    22:         <div class="form-group">
+  
+app/views/users/index.html.erb:19
+
+Information for cause: NameError (undefined local variable or method `create_path' for #<ActionView::Base:0x0000000000bfe0>):
+  
+app/views/users/index.html.erb:19
+Started POST "/__web_console/repl_sessions/82ce7e38d711996c8b5c3f10629ca945/trace" for 127.0.0.1 at 2024-12-18 02:41:39 +0300
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:50:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (8.0.1) lib/abstract_controller/base.rb:158:in `process'
+actionview (8.0.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:50:44 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (8.0.1) lib/abstract_controller/base.rb:158:in `process'
+actionview (8.0.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:50:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (8.0.1) lib/abstract_controller/base.rb:158:in `process'
+actionview (8.0.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:51:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:54:49 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 6.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 806ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_registration_path' for #<ActionView::Base:0x0000000000bec8>)
+Caused by: NameError (undefined local variable or method `users_registration_path' for #<ActionView::Base:0x0000000000bec8>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `users_registration_path' for #<ActionView::Base:0x0000000000bec8>):
+    1: <%= form_for(@user, url: users_registration_path) do |f| %>
+    2:   <div class="form-group">
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name, class: "form-control", required: true %>
+  
+app/views/users/index.html.erb:1
+
+Information for cause: NameError (undefined local variable or method `users_registration_path' for #<ActionView::Base:0x0000000000bec8>):
+  
+app/views/users/index.html.erb:1
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:55:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 7.9ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.3ms)
+Completed 500 Internal Server Error in 773ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.8ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty)
+Caused by: ArgumentError (First argument in form cannot contain nil or be empty)
+
+Information for: ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user, url: users_index_path) do |f| %>
+    2:   <div class="form-group">
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name, class: "form-control", required: true %>
+  
+app/views/users/index.html.erb:1
+
+Information for cause: ArgumentError (First argument in form cannot contain nil or be empty):
+  
+app/views/users/index.html.erb:1
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:56:31 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 8.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 636ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty)
+Caused by: ArgumentError (First argument in form cannot contain nil or be empty)
+
+Information for: ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user, url: users_index_path) do |f| %>
+    2:   <div class="form-group">
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name, class: "form-control", required: true %>
+  
+app/views/users/index.html.erb:1
+
+Information for cause: ArgumentError (First argument in form cannot contain nil or be empty):
+  
+app/views/users/index.html.erb:1
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 02:59:17 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:00:11 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 8.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 692ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty)
+Caused by: ArgumentError (First argument in form cannot contain nil or be empty)
+
+Information for: ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user, url: users_index_url) do |f| %>
+    2:   <div class="form-group">
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name, class: "form-control", required: true %>
+  
+app/views/users/index.html.erb:1
+
+Information for cause: ArgumentError (First argument in form cannot contain nil or be empty):
+  
+app/views/users/index.html.erb:1
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:02:36 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 7.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 677ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `registration_path' for #<ActionView::Base:0x0000000000bf40>)
+Caused by: NameError (undefined local variable or method `registration_path' for #<ActionView::Base:0x0000000000bf40>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `registration_path' for #<ActionView::Base:0x0000000000bf40>):
+    1: <%= form_for(@user, url: registration_path) do |f| %>
+    2:   <div class="form-group">
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name, class: "form-control", required: true %>
+  
+app/views/users/index.html.erb:1
+
+Information for cause: NameError (undefined local variable or method `registration_path' for #<ActionView::Base:0x0000000000bf40>):
+  
+app/views/users/index.html.erb:1
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:05:07 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 10.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 691ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty)
+Caused by: ArgumentError (First argument in form cannot contain nil or be empty)
+
+Information for: ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user, url: registration_path) do |f| %>
+    2:   <div class="form-group">
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name, class: "form-control", required: true %>
+  
+app/views/users/index.html.erb:1
+
+Information for cause: ArgumentError (First argument in form cannot contain nil or be empty):
+  
+app/views/users/index.html.erb:1
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:06:24 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 7.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 642ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty)
+Caused by: ArgumentError (First argument in form cannot contain nil or be empty)
+
+Information for: ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user, url: registration_path) do |f| %>
+    2:   <div class="form-group">
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name, class: "form-control", required: true %>
+  
+app/views/users/index.html.erb:1
+
+Information for cause: ArgumentError (First argument in form cannot contain nil or be empty):
+  
+app/views/users/index.html.erb:1
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:07:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 8.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 695ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.5ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty)
+Caused by: ArgumentError (First argument in form cannot contain nil or be empty)
+
+Information for: ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user, url: registration_path) do |f| %>
+    2:   <div class="form-group">
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name, class: "form-control", required: true %>
+  
+app/views/users/index.html.erb:1
+
+Information for cause: ArgumentError (First argument in form cannot contain nil or be empty):
+  
+app/views/users/index.html.erb:1
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:11:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 8.4ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 0.3ms)
+Completed 500 Internal Server Error in 702ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.1ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty)
+Caused by: ArgumentError (First argument in form cannot contain nil or be empty)
+
+Information for: ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user, url: registration_path) do |f| %>
+    2:   <div class="form-group">
+    3:     <%= f.label :login %>
+    4:     <%= f.text_field :name, class: "form-control", required: true %>
+  
+app/views/users/index.html.erb:1
+
+Information for cause: ArgumentError (First argument in form cannot contain nil or be empty):
+  
+app/views/users/index.html.erb:1
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:12:30 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 7.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 685ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.4ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty)
+Caused by: ArgumentError (First argument in form cannot contain nil or be empty)
+
+Information for: ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user, url: registration_path) do |f| %>
+    2:   <div class="form-group">
+    3:     <%= f.label :login %>
+    4:     <%= f.text_field :login, class: "form-control", required: true %>
+  
+app/views/users/index.html.erb:1
+
+Information for cause: ArgumentError (First argument in form cannot contain nil or be empty):
+  
+app/views/users/index.html.erb:1
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:13:48 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 8.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 0.2ms)
+Completed 500 Internal Server Error in 711ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty)
+Caused by: ArgumentError (First argument in form cannot contain nil or be empty)
+
+Information for: ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <<%= form_for(@user, url: registration_path) do |f| %>
+    2:   <div>
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name %>
+  
+app/views/users/index.html.erb:1
+
+Information for cause: ArgumentError (First argument in form cannot contain nil or be empty):
+  
+app/views/users/index.html.erb:1
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:16:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:17:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:17:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:23:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/rails/info/routes?query=users_path" for 127.0.0.1 at 2024-12-18 03:23:49 +0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"query"=>"users_path"}
+Completed 200 OK in 582ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/info/routes?query=users_path" for 127.0.0.1 at 2024-12-18 03:23:50 +0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"query"=>"users_path"}
+Completed 200 OK in 309ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/info/routes?query=users_path" for 127.0.0.1 at 2024-12-18 03:23:51 +0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"query"=>"users_path"}
+Completed 200 OK in 291ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:26:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:29:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:29:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:30:25 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:33:43 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:33:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:34:17 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (8.0.1) lib/abstract_controller/base.rb:158:in `process'
+actionview (8.0.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:34:19 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (8.0.1) lib/abstract_controller/base.rb:158:in `process'
+actionview (8.0.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:34:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/index"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:35:04 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 38.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 63.4ms | GC: 0.0ms)
+Completed 200 OK in 814ms (Views: 74.3ms | ActiveRecord: 25.6ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-12-18 03:35:17 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (4.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@gmail.com' LIMIT 1 /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 485ms (ActiveRecord: 5.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x00000000017458>):
+  
+app/controllers/users_controller.rb:9:in `create'
+Started POST "/users" for 127.0.0.1 at 2024-12-18 03:36:32 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (5.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@gmail.com' LIMIT 1 /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@gmail.com' LIMIT 1 /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to 
+Completed 500 Internal Server Error in 575ms (ActiveRecord: 36.6ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+  
+NoMethodError (undefined method `index_url' for #<UsersController:0x0000000001aef0>):
+  
+app/controllers/users_controller.rb:13:in `create'
+Started POST "/users" for 127.0.0.1 at 2024-12-18 03:37:15 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (5.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@gmail.com' LIMIT 1 /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@gmail.com' LIMIT 1 /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/index
+Completed 302 Found in 547ms (ActiveRecord: 38.8ms (2 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:37:16 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.0ms)
+Completed 200 OK in 322ms (Views: 18.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:38:37 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 5.4ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | GC: 0.4ms)
+Completed 200 OK in 370ms (Views: 21.5ms | ActiveRecord: 25.5ms (0 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/users/root_path" for 127.0.0.1 at 2024-12-18 03:38:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/root_path"):
+  
+Started GET "/users/root_path" for 127.0.0.1 at 2024-12-18 03:39:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/root_path"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:40:30 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | GC: 0.0ms)
+Completed 200 OK in 361ms (Views: 20.4ms | ActiveRecord: 26.3ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/users/home_index_url" for 127.0.0.1 at 2024-12-18 03:40:32 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/home_index_url"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:44:27 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 7.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | GC: 0.0ms)
+Completed 200 OK in 382ms (Views: 24.2ms | ActiveRecord: 28.7ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-18 03:44:28 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 7.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 0.1ms)
+Completed 200 OK in 315ms (Views: 10.6ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/users_new_url" for 127.0.0.1 at 2024-12-18 03:44:30 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users_new_url"):
+  
+Started GET "/users_new_url" for 127.0.0.1 at 2024-12-18 03:45:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users_new_url"):
+  
+Started GET "/" for 127.0.0.1 at 2024-12-18 03:45:16 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (21.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 26.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | GC: 0.0ms)
+Completed 200 OK in 317ms (Views: 18.6ms | ActiveRecord: 21.2ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:45:18 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 5.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | GC: 0.0ms)
+Completed 200 OK in 339ms (Views: 10.0ms | ActiveRecord: 2.3ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-18 03:45:19 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 316ms (Views: 4.7ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:45:21 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 257ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-12-18 03:45:33 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@gmail.com' LIMIT 1 /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@gmail.com' LIMIT 1 /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/index
+Completed 302 Found in 508ms (ActiveRecord: 9.3ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:45:34 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.1ms)
+Completed 200 OK in 298ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-18 03:46:21 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 0.0ms)
+Completed 200 OK in 317ms (Views: 9.0ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:48:32 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 34.4ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | GC: 0.1ms)
+Completed 200 OK in 404ms (Views: 49.9ms | ActiveRecord: 24.5ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started POST "/users/index" for 127.0.0.1 at 2024-12-18 03:48:43 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/users/index"):
+  
+Started POST "/users/index" for 127.0.0.1 at 2024-12-18 03:49:15 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"uuu", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_conf"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 538ms (ActiveRecord: 26.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password_conf' for User.)
+Caused by: NoMethodError (undefined method `password_conf=' for #<User id: nil, login: "uuu", password_digest: [FILTERED], email: [FILTERED], created_at: nil, updated_at: nil>)
+
+Information for: ActiveModel::UnknownAttributeError (unknown attribute 'password_conf' for User.):
+  
+app/controllers/users_controller.rb:8:in `create'
+
+Information for cause: NoMethodError (undefined method `password_conf=' for #<User id: nil, login: "uuu", password_digest: [FILTERED], email: [FILTERED], created_at: nil, updated_at: nil>):
+  
+app/controllers/users_controller.rb:8:in `create'
+Started POST "/users/index" for 127.0.0.1 at 2024-12-18 03:51:27 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"uuu", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_conf"=>"[FILTERED]"}, "commit"=>"Create User"}
+[31mUnpermitted parameter: :password_conf. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fedf58b73c0>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"uuu", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_conf"=>"[FILTERED]"}, "commit"=>"Create User", "controller"=>"users", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (5.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@gmail.com' LIMIT 1 /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("login", "password_digest", "email", "created_at", "updated_at") VALUES ('uuu', '$2a$12$NJxap83qea7Doxk5ApI1FeiIBd93ttsp51/d/4kTkeSXvhMsxL3hO', 'uliana.ivashkova@gmail.com', '2024-12-18 00:51:28.769793', '2024-12-18 00:51:28.769793') RETURNING "id" /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@gmail.com' AND "users"."id" != 1 LIMIT 1 /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 565ms (ActiveRecord: 46.0ms (3 queries, 0 cached) | GC: 0.2ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x0000000003ca78>):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started POST "/users/index" for 127.0.0.1 at 2024-12-18 03:51:50 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"uuu", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_conf"=>"[FILTERED]"}, "commit"=>"Create User"}
+[31mUnpermitted parameter: :password_conf. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fedf84e4920>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"uuu", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_conf"=>"[FILTERED]"}, "commit"=>"Create User", "controller"=>"users", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (3.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@gmail.com' LIMIT 1 /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@gmail.com' LIMIT 1 /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/index
+Completed 302 Found in 514ms (ActiveRecord: 8.1ms (2 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:51:50 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 5.4ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 0.3ms)
+Completed 200 OK in 307ms (Views: 20.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:52:39 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | GC: 0.0ms)
+Completed 200 OK in 377ms (Views: 20.7ms | ActiveRecord: 27.6ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2024-12-18 03:52:41 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 8.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | GC: 0.2ms)
+Completed 200 OK in 316ms (Views: 11.1ms | ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-18 03:52:49 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.2ms)
+Completed 200 OK in 297ms (Views: 4.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[35m (17.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" /*application='Projectweb'*/[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar NOT NULL, "password_digest" varchar NOT NULL, "email" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Projectweb'*/[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20231010100000) /*application='Projectweb'*/[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-18 01:16:11.145508', '2024-12-18 01:16:11.145515') RETURNING "key" /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2024-12-18 01:16:11.154215' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '2c3ee51120948e0ecddc1dfeb84a3b18b61b50c6', '2024-12-18 01:16:11.159316', '2024-12-18 01:16:11.159319') RETURNING "key" /*application='Projectweb'*/[0m
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Projectweb'*/[0m
+  [1m[36mUser Load (18.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Projectweb'*/[0m
+  [1m[36mUser Load (30.7ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Projectweb'*/[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /*application='Projectweb'*/[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Projectweb'*/[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@gmail.com' LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK TRANSACTION /*application='Projectweb'*/[0m

@@ -1,12 +1,21 @@
 <h1>HELLO</h1>
 
 <ul>
-  <% @users.each do |user| %>
-    <tr>
-      <td><%= user.email %></td>
-      <td><%= user.id %></td>
-    </tr>
+  <% @wishes.each do |wish| %>
+    <li>
+      <strong><%= wish.title %></strong><br>
+      <%= wish.description %><br>
+      <em>Создано пользователем: <%= wish.user.email %></em>
+    </li>
   <% end %>
 </ul>
 
-<%= link_to "Регистрация", users_index_path %>
+<% if user_signed_in? %>
+  <% if @current_user %>
+    <%= link_to "Личный кабинет", profile_user_path(@current_user) %>
+  <% end %>
+  <%= link_to "Выйти", logout_path, method: :delete %>
+<% else %>
+  <%= link_to "Регистрация", users_index_path %>
+  <%= link_to "Войти", login_path %>
+<% end %>

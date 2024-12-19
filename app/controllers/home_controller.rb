@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @users = User.all
+    @wishes = Wish.includes(:user).all
   end
 
 end

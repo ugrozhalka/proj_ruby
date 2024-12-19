@@ -1,0 +1,14 @@
+<h1>Wishes</h1>
+<%= link_to 'Новое пожелание', new_wish_path %>
+
+<ul>
+  <% @wishes.each do |wish| %>
+    <li>
+      <strong><%= wish.title %></strong> by <%= wish.user.login %><br>
+      <%= wish.description %><br>
+      <%= link_to 'Просмотр', wish_path(wish) %> |
+      <%= link_to 'Редактировать', edit_wish_path(wish) %> |
+      <%= link_to 'Удалить', wish_path(wish), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,30 @@
+<!-- app/views/users/profile.html.erb -->
+<h1>Личный кабинет</h1>
+
+<h2>Ваши пожелания</h2>
+<ul>
+  <% @user.wishes.each do |wish| %>
+    <li>
+      <strong><%= wish.title %></strong><br>
+      <%= wish.description %><br>
+      <%= link_to 'Просмотр', wish_path(wish) %> |
+      <%= link_to 'Редактировать', edit_wish_path(wish) %> |
+      <%= link_to 'Удалить', wish_path(wish), method: :delete, data: { confirm: 'Вы уверены?' } %>
+    </li>
+  <% end %>
+</ul>
+
+<div>
+  <h3>Добавить новое пожелание</h3>
+  <%= link_to "Создать карточку желания", new_wish_path %>
+</div>
+
+<div>
+  <%= link_to 'На главную', root_path %>
+  <%= link_to 'Выйти', logout_path, method: :delete %>
+</div>
+
+
+
+
+

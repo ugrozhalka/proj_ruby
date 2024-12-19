@@ -1,0 +1,6 @@
+<h1><%= @wish.title %></h1>
+<p><%= @wish.description %></p>
+<p>Created by: <%= @wish.user.login %></p>
+
+<%= link_to 'Редактировать', edit_wish_path(@wish) %> |
+<%= link_to 'Назад', profile_user_path(@current_user) %>

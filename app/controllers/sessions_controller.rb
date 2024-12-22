@@ -8,10 +8,10 @@ class SessionsController < ApplicationController
 
     if @user&.authenticate(params[:password]) # Проверка пароля
       session[:user_id] = @user.id
-      redirect_to wishes_path, notice: "Successfully logged in"
+      redirect_to root_path, notice: "Successfully logged in"
     else
       flash.now[:alert] = "Invalid email or password"
-      render :new
+      render :index
     end
   end
 

@@ -1,21 +1,19 @@
-<h1>HELLO</h1>
-
-<ul>
-  <% @wishes.each do |wish| %>
-    <li>
-      <strong><%= wish.title %></strong><br>
-      <%= wish.description %><br>
-      <em>Создано пользователем: <%= wish.user.email %></em>
-    </li>
+<div id="main-page" class="container hidden">
+<h2>Карточки желаний</h2><br>
+  <% if user_signed_in? %>
+    <% if @current_user %>
+      <div id="wish-card-container">
+        <% @wishes.each do |wish| %>
+          <div class="wish-card">
+            <h3><%= wish.title %></h3>
+            <p><%= wish.description %></p>
+            <p>Создано пользователем: <%= wish.user.login %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% else %>
+    <h3>Чтобы посмотреть, что загадали другие пользователи, необходимо войти или зарегистрироваться</h3>
   <% end %>
-</ul>
 
-<% if user_signed_in? %>
-  <% if @current_user %>
-    <%= link_to "Личный кабинет", profile_user_path(@current_user) %>
-  <% end %>
-  <%= link_to "Выйти", logout_path, method: :delete %>
-<% else %>
-  <%= link_to "Регистрация", users_index_path %>
-  <%= link_to "Войти", login_path %>
-<% end %>
+</div>

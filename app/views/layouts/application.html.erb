@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -17,11 +21,26 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
   </head>
 
   <body>
+  <nav class="navbar">
+    <div class="brand">
+      <h1>Wish Cards</h1>
+    </div>
+    <div class="nav-links">
+      <%= link_to "На главную", home_index_path %>
+      <% if user_signed_in? %>
+        <% if @current_user %>
+          <a><%= link_to "Личный кабинет", profile_user_path(@current_user) %></a>
+          <a><%= link_to "Выйти", logout_path, method: :delete %></a>
+        <% end %>
+      <% else %>
+        <a><%= link_to "Регистрация", users_index_path %></a>
+        <a><%= link_to "Войти", login_path %></a>
+      <% end %>
+    </div>
+  </nav>
     <%= yield %>
   </body>
 </html>

@@ -17,7 +17,7 @@ class WishesController < ApplicationController
       redirect_to profile_user_path(@current_user), notice: "Wish created successfully."
 
     else
-      render :new
+      render :index
     end
   end
 

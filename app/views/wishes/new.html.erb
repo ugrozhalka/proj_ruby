@@ -1,31 +1,32 @@
-<h1>New Wish</h1>
+<div id="wish-form" class="container hidden">
+  <div class="auth-form" id="create-wish-form">
+    <h2>Новое желание</h2><br>
 
-<%= form_with(model: @wish, local: true) do |form| %>
-  <% if @wish.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@wish.errors.count, "error") %> prohibited this wish from being saved:</h2>
+    <%= form_with(model: @wish, local: true) do |form| %>
+      <% if @wish.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@wish.errors.count, "error") %> prohibited this wish from being saved:</h2>
 
-      <ul>
-        <% @wish.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% @wish.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+      <div class="form-group">
+        <%= form.label "Название" %>
+        <%= form.text_field :title %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label "Описание" %>
+        <%= form.text_area :description %>
+      </div>
+
+      <%= form.submit "Создать", class: "btn", type: "submit"%>
+    <% end %>
+    <br><%= link_to 'Назад', profile_user_path(@current_user), class: "btn" %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
-<%= link_to 'Назад', profile_user_path(@current_user) %>
+</div>

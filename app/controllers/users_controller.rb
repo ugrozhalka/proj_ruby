@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to user_profile_path, notice: "Registration completed. You are now logged in." # Перенаправляем на профиль
+      redirect_to root_path, notice: "Registration completed. You are now logged in." # Перенаправляем на профиль
     else
       redirect_to users_index_path, alert: @user.errors.full_messages.join(", ") # Сообщаем об ошибках
     end

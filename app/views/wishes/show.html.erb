@@ -1,6 +1,9 @@
-<h1><%= @wish.title %></h1>
-<p><%= @wish.description %></p>
-<p>Created by: <%= @wish.user.login %></p>
-
-<%= link_to 'Редактировать', edit_wish_path(@wish) %> |
-<%= link_to 'Назад', profile_user_path(@current_user) %>
+<div id="wish-card">
+  <div class="wish-card">
+    <h3><%= @wish.title %></h3>
+    <p><%= @wish.description %></p>
+    <p>Создано пользователем: <%= @wish.user.login %></p>
+  </div>
+    <%= link_to 'Редактировать', editWish_path(@wish), class: "btn" %>
+    <%= link_to 'Назад', profile_user_path(@current_user), class: "btn" %>
+</div>

@@ -1,5 +1,5 @@
 class WishesController < ApplicationController
-  before_action :set_wish, only: [:show, :edit, :update, :destroy]
+  before_action :set_wish, only: [:show, :edit, :update, :destroy, :fulfill]
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
@@ -41,6 +41,18 @@ class WishesController < ApplicationController
       redirect_to profile_user_path(@current_user), notice: 'Пожелание успешно удалено.'
     else
       redirect_to profile_user_path(@current_user), alert: 'Вы не можете удалить это пожелание.'
+    end
+  end
+
+  def fulfill
+    @wish = Wish.find(params[:id])
+    @fulfillment = @wish.build_fulfillment
+    @fulfillment.creator_id = @wish.user_id
+    @fulfillment.performer_id = @current_user.id
+    if @fulfillment.save
+      redirect_to root_path, notice: "Fulfillment created successfully."
+    else
+      render profile_user_path(@current_user), alert: "Failed to create fulfillment."
     end
   end
 

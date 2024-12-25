@@ -16,7 +16,12 @@ class ApplicationController < ActionController::Base
 
   private
   def set_current_user
-    @current_user = User.find(session[:user_id]) if session[:user_id]
+    user = User.find_by(id: session[:user_id])
+    if user.nil?
+      @current_user = user
+    else
+      @current_user = user if session[:user_id]
+    end
   end
 
   def destroy_session

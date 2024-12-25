@@ -20,12 +20,17 @@ class UsersController < ApplicationController
 
   def profile
     @user = @current_user # Передаем текущего пользователя в представление
+    @fulfillments = Fulfillment.where(performer_id: @user.id)
   end
 
 
   def destroy
-    session[:user_id] = nil
-    redirect_to(root_path)
+    if @current_user.destroy
+      session[:user_id] = nil
+      redirect_to root_path, notice: 'Аккаунт успешно удален.'
+    else
+      redirect_to profile_user_path(@current_user), alert: 'Возникла ошибка при удалении аккаунта'
+    end
   end
 
   private

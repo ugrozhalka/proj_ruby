@@ -3,7 +3,57 @@
     <h3><%= @wish.title %></h3>
     <p><%= @wish.description %></p>
     <p>Создано пользователем: <%= @wish.user.login %></p>
+    <% if Fulfillment.exists?(wish_id: @wish.id) %>
+      <p>Выполнено пользователем: <%= User.find_by(id: Fulfillment.find_by(wish_id: @wish.id).performer_id).login %></p>
+    <% end %>
   </div>
-    <%= link_to 'Редактировать', editWish_path(@wish), class: "btn" %>
-    <%= link_to 'Назад', profile_user_path(@current_user), class: "btn" %>
+  <% if !Fulfillment.exists?(wish_id: @wish.id) %>
+    <%= link_to 'Редактировать', editWish_path(@wish), class: "btn"  %>
+  <% end %>
+  <%= link_to 'Назад', profile_user_path(@current_user), class: "btn" %>
+  <a href="#" class="btn btn-delete" id="delete-btn">Удалить</a>
 </div>
+
+<div id="delete-modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" id="close-modal">&times;</span>
+    <p>Вы уверены, что хотите удалить это пожелание?</p><br>
+    <div class="button-container">
+      <%= form_with(url: deleteWish_path(@wish), method: :delete, local: true, id: "confirm-delete-form") do %>
+        <%= submit_tag 'Да, удалить', class: "btn btn-delete" %>
+      <% end %>
+      <button class="btn" id="cancel-delete">Отмена</button>
+    </div>
+  </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const deleteBtn = document.getElementById("delete-btn");
+        const modal = document.getElementById("delete-modal");
+        const closeModal = document.getElementById("close-modal");
+        const cancelDelete = document.getElementById("cancel-delete");
+
+        // Открытие модального окна
+        deleteBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Закрытие модального окна при нажатии на "x"
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Закрытие модального окна при нажатии на кнопку "Отмена"
+        cancelDelete.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Закрытие модального окна при клике вне его содержимого
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    });
+</script>

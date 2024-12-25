@@ -22595,3 +22595,378 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 1622ms (Views: 54.3ms | ActiveRecord: 14.3ms (15 queries, 2 cached) | GC: 5.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2024-12-25 06:38:24 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.6ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 3, 5) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (5.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (2.4ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 296.9ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 298.1ms | GC: 0.7ms)
+Completed 500 Internal Server Error in 2702ms (ActiveRecord: 56.7ms (6 queries, 1 cached) | GC: 3.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass)
+Caused by: NoMethodError (undefined method `id' for nil:NilClass)
+
+Information for: ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     8:             <h3><%= wish.title %></h3>
+     9:             <p><%= wish.description %></p>
+    10: 
+    11:             <% if wish.user.id == @current_user.id %>
+    12:               <p>Это ваше желание</p><br>
+    13:             <% else %>
+    14:               <p>Создано пользователем: <%= wish.user.login %></p><br>
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:6
+
+Information for cause: NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2024-12-25 06:40:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.5ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 3, 5) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.5ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 72.5ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 73.8ms | GC: 0.6ms)
+Completed 500 Internal Server Error in 2021ms (ActiveRecord: 32.8ms (6 queries, 1 cached) | GC: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass)
+Caused by: NoMethodError (undefined method `id' for nil:NilClass)
+
+Information for: ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     8:             <h3><%= wish.title %></h3>
+     9:             <p><%= wish.description %></p>
+    10: 
+    11:             <% if wish.user.id == @current_user.id %>
+    12:               <p>Это ваше желание</p><br>
+    13:             <% else %>
+    14:               <p>Создано пользователем: <%= wish.user.login %></p><br>
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:6
+
+Information for cause: NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2024-12-25 06:43:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.4ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 3, 5) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (5.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (5.9ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 154.8ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 155.9ms | GC: 0.6ms)
+Completed 500 Internal Server Error in 1995ms (ActiveRecord: 54.3ms (6 queries, 1 cached) | GC: 3.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `login' for nil:NilClass)
+Caused by: NoMethodError (undefined method `login' for nil:NilClass)
+
+Information for: ActionView::Template::Error (undefined method `login' for nil:NilClass):
+    11:             <% if wish.user_id == @current_user.id %>
+    12:               <p>Это ваше желание</p><br>
+    13:             <% else %>
+    14:               <p>Создано пользователем: <%= wish.user.login %></p><br>
+    15:             <% end %>
+    16: 
+    17:             <% if Fulfillment.exists?(wish_id: wish.id) %>
+  
+app/views/home/index.html.erb:14
+app/views/home/index.html.erb:6
+
+Information for cause: NoMethodError (undefined method `login' for nil:NilClass):
+  
+app/views/home/index.html.erb:14
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2024-12-25 06:47:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.6ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 3, 5) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.6ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 85.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 86.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 2064ms (ActiveRecord: 45.7ms (6 queries, 1 cached) | GC: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass)
+Caused by: NoMethodError (undefined method `id' for nil:NilClass)
+
+Information for: ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     8:             <h3><%= wish.title %></h3>
+     9:             <p><%= wish.description %></p>
+    10: 
+    11:             <% if wish.user.id == @current_user.id %>
+    12:               <p>Это ваше желание</p><br>
+    13:             <% else %>
+    14:               <p>Создано пользователем: <%= wish.user.login %></p><br>
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:6
+
+Information for cause: NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2024-12-25 06:49:11 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | GC: 0.0ms)
+Completed 200 OK in 1904ms (Views: 76.6ms | ActiveRecord: 35.9ms (0 queries, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-25 06:49:17 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 72.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 74.1ms | GC: 0.0ms)
+Completed 200 OK in 881ms (Views: 77.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-25 06:49:22 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "commit"=>"Войти"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'uiva@sfedu.ru' LIMIT 1 /*action='create',application='Projectweb',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 960ms (ActiveRecord: 2.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-25 06:49:23 +0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.6ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 3, 5) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.7ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 78.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 79.9ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 869ms (ActiveRecord: 7.9ms (6 queries, 1 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass)
+Caused by: NoMethodError (undefined method `id' for nil:NilClass)
+
+Information for: ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     8:             <h3><%= wish.title %></h3>
+     9:             <p><%= wish.description %></p>
+    10: 
+    11:             <% if wish.user.id == @current_user.id %>
+    12:               <p>Это ваше желание</p><br>
+    13:             <% else %>
+    14:               <p>Создано пользователем: <%= wish.user.login %></p><br>
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:6
+
+Information for cause: NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:6
+Started GET "/home/index" for 127.0.0.1 at 2024-12-25 06:50:38 +0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.6ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mFulfillment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.6ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:11
+  Rendered home/index.html.erb within layouts/application (Duration: 67.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 68.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 923ms (ActiveRecord: 37.6ms (7 queries, 1 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass)
+Caused by: NoMethodError (undefined method `id' for nil:NilClass)
+
+Information for: ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     8:             <h3><%= wish.title %></h3>
+     9:             <p><%= wish.description %></p>
+    10: 
+    11:             <% if wish.user.id == @current_user.id %>
+    12:               <p>Это ваше желание</p><br>
+    13:             <% else %>
+    14:               <p>Создано пользователем: <%= wish.user.login %></p><br>
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:6
+
+Information for cause: NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:6
+Started GET "/users/index" for 127.0.0.1 at 2024-12-25 06:50:46 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 5.9ms | GC: 0.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | GC: 0.0ms)
+Completed 200 OK in 811ms (Views: 16.6ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/index" for 127.0.0.1 at 2024-12-25 06:51:03 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"ere", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_conf"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться"}
+[31mUnpermitted parameter: :password_conf. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f0b9c861420>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"ere", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_conf"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться", "controller"=>"users", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (3.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@list.ru' LIMIT 1 /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/users/index
+Completed 302 Found in 974ms (ActiveRecord: 5.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2024-12-25 06:51:04 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 0.0ms)
+Completed 200 OK in 716ms (Views: 6.6ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/index" for 127.0.0.1 at 2024-12-25 06:51:43 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"ewew", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_conf"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться"}
+[31mUnpermitted parameter: :password_conf. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f0b9c0f3fd0>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"ewew", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_conf"=>"[FILTERED]"}, "commit"=>"Зарегистрироваться", "controller"=>"users", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (3.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'uliana.ivashkova@list.com' LIMIT 1 /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("login", "password_digest", "email", "created_at", "updated_at") VALUES ('ewew', '$2a$12$RPmox6WHPPH7FYVbKTC2guXTBuF61fJNN7hDMHrAXp4ZE0GYuuR.6', 'uliana.ivashkova@list.com', '2024-12-25 03:51:44.214091', '2024-12-25 03:51:44.214091') RETURNING "id" /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 963ms (ActiveRecord: 12.3ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-25 06:51:44 +0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.6ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mFulfillment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.4ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:11
+  Rendered home/index.html.erb within layouts/application (Duration: 14.8ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | GC: 0.3ms)
+Completed 500 Internal Server Error in 767ms (ActiveRecord: 5.2ms (7 queries, 0 cached) | GC: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass)
+Caused by: NoMethodError (undefined method `id' for nil:NilClass)
+
+Information for: ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     8:             <h3><%= wish.title %></h3>
+     9:             <p><%= wish.description %></p>
+    10: 
+    11:             <% if wish.user.id == @current_user.id %>
+    12:               <p>Это ваше желание</p><br>
+    13:             <% else %>
+    14:               <p>Создано пользователем: <%= wish.user.login %></p><br>
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:6
+
+Information for cause: NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:6

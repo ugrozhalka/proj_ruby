@@ -7,7 +7,21 @@
           <div class="wish-card">
             <h3><%= wish.title %></h3>
             <p><%= wish.description %></p>
-            <p>Создано пользователем: <%= wish.user.login %></p>
+
+            <% if wish.user.id == @current_user.id %>
+              <p>Это ваше желание</p><br>
+            <% else %>
+              <p>Создано пользователем: <%= wish.user.login %></p><br>
+            <% end %>
+
+            <% if Fulfillment.exists?(wish_id: wish.id) %>
+              <% user = User.find_by(id: Fulfillment.find_by(wish_id: wish.id).performer_id)  %>
+              <p>Выполнено пользователем: <%= user.login %></p>
+            <% else %>
+              <% if wish.user.id != @current_user.id %>
+                <%= button_to 'Ометить выполненным', fulfill_wish_path(wish), method: :post, class: "btn"  %>
+              <% end %>
+            <% end %>
           </div>
         <% end %>
       </div>
@@ -15,5 +29,4 @@
   <% else %>
     <h3>Чтобы посмотреть, что загадали другие пользователи, необходимо войти или зарегистрироваться</h3>
   <% end %>
-
 </div>

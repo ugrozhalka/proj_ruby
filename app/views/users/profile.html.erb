@@ -1,5 +1,6 @@
 <div id="account-page" class="container hidden">
-  <h2>Личный кабинет</h2><br>
+  <h2>Личный кабинет</h2>
+  <h3>Пользователь: <i><%= @user.login %></i></h3><br>
   <%= link_to "Создать новое желание", wishes_path, class: "btn" %><br><br>
 
   <div id="my-wishes-container">
@@ -7,17 +8,76 @@
     <br><% @user.wishes.each do |wish| %>
       <div class="wish-card">
         <h3><%= wish.title %></h3>
-        <p><%= wish.description %></p><br>
-        <%= link_to 'Просмотр', showWish_path(wish), class: "btn" %>
-        <%= link_to 'Редактировать', editWish_path(wish), class: "btn"  %>
-        <%= form_with(url: delWish_path(wish), method: :delete, local: true) do %>
-          <br><%= submit_tag 'Удалить', data: { confirm: 'Вы уверены, что хотите удалить это пожелание?' }, class: "btn" %>
+        <p><%= wish.description %></p>
+        <% if Fulfillment.exists?(wish_id: wish.id) %>
+          <p>Выполнено пользователем: <%= User.find_by(id: Fulfillment.find_by(wish_id: wish.id).performer_id).login %></p>
         <% end %>
-
+        <br><%= link_to 'Просмотр', showWish_path(wish), class: "btn" %>
       </div>
     <% end %>
   </div>
+
+  <div id="performed-wishes-container">
+    <br><h3>Желания, выполненные мной</h3><br>
+    <% if @fulfillments.any? %>
+      <% @fulfillments.each do |fulfillment| %>
+
+        <% wish = Wish.find_by(id: fulfillment.wish_id)%>
+          <div class="wish-card">
+            <h3><%= wish.title %></h3>
+            <p><%= wish.description %></p>
+            <p>Создано пользователем: <%= User.find_by(id: wish.user_id).login %></p><br>
+          </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <a href="#" class="btn btn-delete" id="delete-btn">Удалить аккаунт</a>
 </div>
+
+<div id="delete-modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" id="close-modal">&times;</span>
+    <p>Вы уверены, что хотите удалить аккаунт?</p><br>
+    <div class="button-container">
+      <%= form_with(url: deleteUser_path(@user), method: :delete, local: true, id: "confirm-delete-form") do %>
+        <%= submit_tag 'Да, удалить', class: "btn btn-delete" %>
+      <% end %>
+      <button class="btn" id="cancel-delete">Отмена</button>
+    </div>
+  </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const deleteBtn = document.getElementById("delete-btn");
+        const modal = document.getElementById("delete-modal");
+        const closeModal = document.getElementById("close-modal");
+        const cancelDelete = document.getElementById("cancel-delete");
+
+        // Открытие модального окна
+        deleteBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Закрытие модального окна при нажатии на "x"
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Закрытие модального окна при нажатии на кнопку "Отмена"
+        cancelDelete.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Закрытие модального окна при клике вне его содержимого
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    });
+</script>
 
 
 

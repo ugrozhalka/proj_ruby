@@ -23292,3 +23292,758 @@ Processing by UsersController#profile as HTML
 Completed 200 OK in 1801ms (Views: 52.5ms | ActiveRecord: 14.6ms (13 queries, 2 cached) | GC: 0.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2024-12-25 15:21:38 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.2ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 5, 8) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.2ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 5 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 23 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (1.0ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (1.0ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 121.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 140.1ms | GC: 0.0ms)
+Completed 200 OK in 1745ms (Views: 154.9ms | ActiveRecord: 8.5ms (15 queries, 1 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[35m (14.1ms)[0m  [1m[31mDELETE FROM schema_migrations WHERE version IN ('20231010100000', '20241221170453') /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Migrating to CreateActiveStorageTables (20241225131802)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Projectweb'*/[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "service_name" varchar NOT NULL, "byte_size" bigint NOT NULL, "checksum" varchar, "created_at" datetime(6) NOT NULL) /*application='Projectweb'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key") /*application='Projectweb'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='Projectweb'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id") /*application='Projectweb'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id") /*application='Projectweb'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" bigint NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='Projectweb'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest") /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241225131802') RETURNING "version" /*application='Projectweb'*/[0m
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Projectweb'*/[0m
+Migrating to CreateActionTextTables (20241225131803)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Projectweb'*/[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "action_text_rich_texts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "body" text, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Projectweb'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_action_text_rich_texts_uniqueness" ON "action_text_rich_texts" ("record_type", "record_id", "name") /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241225131803') RETURNING "version" /*application='Projectweb'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Projectweb'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Started GET "/" for 127.0.0.1 at 2024-12-25 17:54:05 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.4ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 5, 8) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.3ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 5 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 23 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.1ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.1ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 177.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 188.2ms | GC: 0.0ms)
+Completed 200 OK in 1636ms (Views: 194.1ms | ActiveRecord: 8.8ms (15 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/users/6/profile" for 127.0.0.1 at 2024-12-25 17:54:11 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:39:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mWish Load (0.2ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."user_id" = 6 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:8
+  [1m[36mFulfillment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."performer_id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:22
+  Rendered users/profile.html.erb within layouts/application (Duration: 21.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | GC: 0.0ms)
+Completed 200 OK in 685ms (Views: 28.0ms | ActiveRecord: 0.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2024-12-25 17:54:15 +0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.4ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 5, 8) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.2ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 5 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 23 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.2ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.3ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 68.5ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 71.2ms | GC: 0.3ms)
+Completed 200 OK in 624ms (Views: 69.9ms | ActiveRecord: 2.6ms (15 queries, 1 cached) | GC: 0.3ms)
+
+
+Started POST "/wishes/4/fulfill" for 127.0.0.1 at 2024-12-25 17:54:17 +0300
+Processing by WishesController#fulfill as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='fulfill',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  [1m[36mWish Load (0.2ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."id" = 4 LIMIT 1 /*action='fulfill',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/wishes_controller.rb:62:in `set_wish'
+  [1m[36mCACHE Wish Load (0.0ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."id" = 4 LIMIT 1[0m
+  ↳ app/controllers/wishes_controller.rb:48:in `fulfill'
+  [1m[36mFulfillment Load (0.3ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='fulfill',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/wishes_controller.rb:49:in `fulfill'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='fulfill',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/wishes_controller.rb:52:in `fulfill'
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='fulfill',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/wishes_controller.rb:52:in `fulfill'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/controllers/wishes_controller.rb:52:in `fulfill'
+  [1m[36mFulfillment Create (0.2ms)[0m  [1m[32mINSERT INTO "fulfillments" ("creator_id", "performer_id", "wish_id", "created_at", "updated_at") VALUES (1, 6, 4, '2024-12-25 14:54:18.211651', '2024-12-25 14:54:18.211651') RETURNING "id" /*action='fulfill',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/wishes_controller.rb:52:in `fulfill'
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='fulfill',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/wishes_controller.rb:52:in `fulfill'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 735ms (ActiveRecord: 18.1ms (7 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-25 17:54:18 +0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.1ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 5, 8) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.3ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.3ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 5 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 23 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.1ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.2ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 49.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | GC: 0.0ms)
+Completed 200 OK in 571ms (Views: 50.7ms | ActiveRecord: 2.1ms (17 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/users/6/profile" for 127.0.0.1 at 2024-12-25 17:54:19 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:39:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mWish Load (0.3ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."user_id" = 6 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:8
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."performer_id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mFulfillment Load (0.1ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."performer_id" = 6 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:23
+  [1m[36mWish Load (0.1ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."id" = 4 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:29
+  Rendered users/profile.html.erb within layouts/application (Duration: 15.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | GC: 0.0ms)
+Completed 200 OK in 838ms (Views: 17.3ms | ActiveRecord: 0.9ms (6 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2024-12-25 17:54:30 +0300
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='destroy',application='Projectweb',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 624ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-25 17:54:30 +0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 543ms (Views: 2.8ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-25 17:54:34 +0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='new',application='Projectweb',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 18.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | GC: 0.0ms)
+Completed 200 OK in 896ms (Views: 26.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-25 17:54:43 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "commit"=>"Войти"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='create',application='Projectweb',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'uklochkova@sfedu.ru' LIMIT 1 /*action='create',application='Projectweb',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 910ms (ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-25 17:54:44 +0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.1ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 5, 8) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.2ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.1ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 5 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 23 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.2ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.1ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 42.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | GC: 0.0ms)
+Completed 200 OK in 591ms (Views: 43.4ms | ActiveRecord: 2.3ms (17 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-25 17:55:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.3ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 5, 8) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.2ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.2ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 5 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 23 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.6ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.3ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 151.2ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 165.4ms | GC: 0.6ms)
+Completed 200 OK in 1506ms (Views: 177.7ms | ActiveRecord: 12.2ms (17 queries, 2 cached) | GC: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-25 17:55:42 +0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.2ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 5, 8) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.1ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.2ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 5 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 23 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.2ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.1ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 49.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 51.6ms | GC: 0.0ms)
+Completed 200 OK in 689ms (Views: 50.1ms | ActiveRecord: 3.0ms (17 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/users/6/profile" for 127.0.0.1 at 2024-12-25 17:55:46 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:39:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mWish Load (0.2ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."user_id" = 6 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:8
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."performer_id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mFulfillment Load (0.2ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."performer_id" = 6 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:23
+  [1m[36mWish Load (0.3ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."id" = 4 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:29
+  Rendered users/profile.html.erb within layouts/application (Duration: 35.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | GC: 0.0ms)
+Completed 200 OK in 597ms (Views: 45.3ms | ActiveRecord: 1.1ms (6 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2024-12-25 17:55:50 +0300
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='destroy',application='Projectweb',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 650ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-25 17:55:51 +0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 566ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-12-25 17:55:55 +0300
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='new',application='Projectweb',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 17.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | GC: 0.0ms)
+Completed 200 OK in 940ms (Views: 25.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-12-25 17:56:03 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "commit"=>"Войти"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1 /*action='create',application='Projectweb',controller='sessions'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'uklochkova@sfedu.ru' LIMIT 1 /*action='create',application='Projectweb',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 999ms (ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-25 17:56:04 +0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.1ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 5, 8) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.1ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.3ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 5 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 23 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.3ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.2ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 49.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 51.3ms | GC: 0.0ms)
+Completed 200 OK in 645ms (Views: 49.5ms | ActiveRecord: 2.8ms (17 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/users/6/profile" for 127.0.0.1 at 2024-12-25 17:56:07 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:39:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mWish Load (0.2ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."user_id" = 6 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:8
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."performer_id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mFulfillment Load (0.4ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."performer_id" = 6 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:23
+  [1m[36mWish Load (0.6ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."id" = 4 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:29
+  Rendered users/profile.html.erb within layouts/application (Duration: 35.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | GC: 0.0ms)
+Completed 200 OK in 684ms (Views: 36.2ms | ActiveRecord: 1.5ms (6 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-26 00:12:46 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Projectweb'*/[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWish Load (0.2ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 5, 8) /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.1ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.7ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 4 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 5 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 23 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.1ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 25 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mFulfillment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mFulfillment Load (0.2ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."wish_id" = 27 LIMIT 1 /*action='index',application='Projectweb',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 196.9ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 210.2ms | GC: 0.3ms)
+Completed 200 OK in 1364ms (Views: 218.7ms | ActiveRecord: 8.1ms (17 queries, 2 cached) | GC: 0.5ms)
+
+
+Started GET "/users/6/profile" for 127.0.0.1 at 2024-12-26 00:12:50 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:39:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mWish Load (0.2ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."user_id" = 6 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:8
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."performer_id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mFulfillment Load (0.1ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."performer_id" = 6 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:23
+  [1m[36mWish Load (0.2ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."id" = 4 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:29
+  Rendered users/profile.html.erb within layouts/application (Duration: 57.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 59.9ms | GC: 0.0ms)
+Completed 200 OK in 704ms (Views: 65.8ms | ActiveRecord: 0.9ms (6 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/wishes/new" for 127.0.0.1 at 2024-12-26 00:12:56 +0300
+Processing by WishesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='new',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering wishes/new.html.erb within layouts/application
+  Rendered wishes/new.html.erb within layouts/application (Duration: 29.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | GC: 0.0ms)
+Completed 200 OK in 650ms (Views: 38.6ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/wishes/new" for 127.0.0.1 at 2024-12-26 00:13:00 +0300
+Processing by WishesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "wish"=>{"title"=>"dg", "description"=>"dfbg"}, "commit"=>"Создать"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='create',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/wishes_controller.rb:16:in `create'
+  [1m[36mWish Create (3.7ms)[0m  [1m[32mINSERT INTO "wishes" ("title", "description", "user_id", "created_at", "updated_at") VALUES ('dg', 'dfbg', 6, '2024-12-25 21:13:01.433474', '2024-12-25 21:13:01.433474') RETURNING "id" /*action='create',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/wishes_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/wishes_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/users/6/profile
+Completed 302 Found in 725ms (ActiveRecord: 9.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/6/profile" for 127.0.0.1 at 2024-12-26 00:13:01 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:39:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mWish Load (0.2ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."user_id" = 6 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:8
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 28 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:12
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."performer_id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mFulfillment Load (0.3ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."performer_id" = 6 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:23
+  [1m[36mWish Load (0.2ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."id" = 4 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:29
+  Rendered users/profile.html.erb within layouts/application (Duration: 43.6ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | GC: 0.3ms)
+Completed 200 OK in 575ms (Views: 45.3ms | ActiveRecord: 1.4ms (7 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/wishes/28" for 127.0.0.1 at 2024-12-26 00:13:03 +0300
+Processing by WishesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='show',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  [1m[36mWish Load (0.2ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."id" = 28 LIMIT 1 /*action='show',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/wishes_controller.rb:62:in `set_wish'
+  Rendering layout layouts/application.html.erb
+  Rendering wishes/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/wishes/show.html.erb:5
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 28 LIMIT 1 /*action='show',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/views/wishes/show.html.erb:6
+  [1m[36mCACHE Fulfillment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."wish_id" = 28 LIMIT 1[0m
+  ↳ app/views/wishes/show.html.erb:10
+  Rendered wishes/show.html.erb within layouts/application (Duration: 12.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | GC: 0.0ms)
+Completed 200 OK in 737ms (Views: 15.2ms | ActiveRecord: 0.5ms (5 queries, 2 cached) | GC: 0.0ms)
+
+
+Started DELETE "/wishes/28" for 127.0.0.1 at 2024-12-26 00:13:07 +0300
+Processing by WishesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Да, удалить", "id"=>"28"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='destroy',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/application_controller.rb:19:in `set_current_user'
+  [1m[36mWish Load (0.1ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."id" = 28 LIMIT 1 /*action='destroy',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/controllers/wishes_controller.rb:62:in `set_wish'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/controllers/wishes_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/models/wish.rb:8:in `destroy'
+  [1m[36mWish Destroy (4.0ms)[0m  [1m[31mDELETE FROM "wishes" WHERE "wishes"."id" = 28 /*action='destroy',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/models/wish.rb:8:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Projectweb',controller='wishes'*/[0m
+  ↳ app/models/wish.rb:8:in `destroy'
+Redirected to http://127.0.0.1:3000/users/6/profile
+Completed 302 Found in 549ms (ActiveRecord: 4.4ms (4 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/users/6/profile" for 127.0.0.1 at 2024-12-26 00:13:07 +0300
+Processing by UsersController#profile as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:39:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/profile.html.erb within layouts/application
+  [1m[36mWish Load (0.2ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."user_id" = 6 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:8
+  [1m[36mFulfillment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "fulfillments" WHERE "fulfillments"."performer_id" = 6 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mFulfillment Load (0.1ms)[0m  [1m[34mSELECT "fulfillments".* FROM "fulfillments" WHERE "fulfillments"."performer_id" = 6 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:23
+  [1m[36mWish Load (0.1ms)[0m  [1m[34mSELECT "wishes".* FROM "wishes" WHERE "wishes"."id" = 4 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='profile',application='Projectweb',controller='users'*/[0m
+  ↳ app/views/users/profile.html.erb:29
+  Rendered users/profile.html.erb within layouts/application (Duration: 15.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | GC: 0.0ms)
+Completed 200 OK in 764ms (Views: 16.2ms | ActiveRecord: 1.0ms (6 queries, 0 cached) | GC: 0.0ms)
+
+

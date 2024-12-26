@@ -24,9 +24,11 @@
 
         <% wish = Wish.find_by(id: fulfillment.wish_id)%>
           <div class="wish-card">
-            <h3><%= wish.title %></h3>
-            <p><%= wish.description %></p>
-            <p>Создано пользователем: <%= User.find_by(id: wish.user_id).login %></p><br>
+            <% if !wish.nil? %>
+                <h3><%= wish.title %></h3>
+                <p><%= wish.description %></p>
+                <p>Создано пользователем: <%= User.find_by(id: wish.user_id).login %></p><br>
+            <% end %>
           </div>
       <% end %>
     <% end %>

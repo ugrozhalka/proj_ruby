@@ -3,6 +3,12 @@
     <%= form_for(@user, url: users_index_url) do |f| %>
       <h2>Регистрация</h2><br>
 
+      <% if flash[:error1] %>
+        <div class="alert alert-danger" id="error_message">
+          <%= flash[:error1] %>
+        </div>
+      <% end %>
+
       <div class="form-group">
         <%= f.label "Логин" %>
         <%= f.text_field :login, class: "form-control", required: true %>
@@ -28,4 +34,14 @@
     <br><p>Уже есть аккаунт?</p>
     <br><%= link_to "Войти", login_path, class: "btn" %>
   </div>
+  <script>
+      $(document).ready(function() {
+          // Удаляем сообщение об ошибке через 5 секунд
+          setTimeout(function() {
+              $("#error_message").fadeOut();
+          }, 5000); // Время в миллисекундах (5 секунд)
+      });
+  </script>
 </div>
+
+

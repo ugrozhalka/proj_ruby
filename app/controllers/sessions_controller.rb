@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: "Successfully logged in"
     else
-      flash.now[:alert] = "Invalid email or password"
+      flash[:error] = "Такого пользователя не существует!"
       render :new
     end
   end

@@ -12,7 +12,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: "Registration completed. You are now logged in." # Перенаправляем на профиль
     else
-      redirect_to users_index_path, alert: @user.errors.full_messages.join(", ") # Сообщаем об ошибках
+      flash[:error1] = "Такой пользователь уже существует!"
+      redirect_to users_index_path
     end
   end
 

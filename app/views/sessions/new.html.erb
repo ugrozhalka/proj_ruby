@@ -2,6 +2,12 @@
   <div class="auth-form" id="login-form">
     <h2>Вход</h2><br>
 
+    <% if flash[:error] %>
+      <div class="alert alert-danger" id="error_message">
+        <%= flash[:error] %>
+      </div>
+    <% end %>
+
     <%= form_with(url: login_path, local: true) do |form| %>
       <div class="form-group">
         <%= form.label :email %>
@@ -17,4 +23,12 @@
     <br><p>Ещё нет аккаунта?</p>
     <br><%= link_to "Зарегистрироваться", users_index_path, class: "btn" %>
   </div>
+  <script>
+      $(document).ready(function() {
+          // Удаляем сообщение об ошибке через 5 секунд
+          setTimeout(function() {
+              $("#error_message").fadeOut();
+          }, 5000); // Время в миллисекундах (5 секунд)
+      });
+  </script>
 </div>

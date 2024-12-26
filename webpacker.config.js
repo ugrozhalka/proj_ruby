@@ -1,8 +1,10 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
-    entry: './src/index.js', // Путь к вашему входному файлу
+    mode: 'production',
+    entry: {
+        application: 'app/javascript/src/application.js'
+    }, // Путь к вашему входному файлу
     output: {
         filename: 'bundle.js', // Имя выходного файла
         path: path.resolve(__dirname, 'dist'), // Путь к выходной папке

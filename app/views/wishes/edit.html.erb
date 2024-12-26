@@ -28,29 +28,4 @@
     <% end %>
     <br><%= link_to 'Назад', profile_user_path(@current_user), class: "btn" %>
   </div>
-  <div class="modal fade" id="confirm_delete_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="myModalLabel">Вы уверены, что хотите удалить аккаунт?</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p> будет удален навсегда. Это действие необратимо.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
-          <button type="button" class="btn btn-danger" id="confirm_delete_button">Да, удалить аккаунт</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-      $('#confirm_delete_button').click(function() {
-          $(this).closest('form').submit();
-      });
-  </script>
 </div>
